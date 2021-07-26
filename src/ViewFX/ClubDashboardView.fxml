@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ClubDashboardController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="550.0" prefWidth="209.0" style="-fx-background-color: #333333;">
+         <children>
+            <VBox alignment="CENTER">
+               <children>
+                  <ImageView fx:id="clubLogo" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin></ImageView>
+                  <Label fx:id="clubName" alignment="CENTER" contentDisplay="CENTER" prefHeight="62.0" prefWidth="209.0" text="Club Name" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+                     <font>
+                        <Font name="Elephant" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="clubWorth" alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="209.0" text="Worth" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+                     <font>
+                        <Font name="Bookman Old Style Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="budget" alignment="CENTER" prefHeight="50.0" prefWidth="209.0" text="Budget" textFill="WHITE">
+                     <font>
+                        <Font name="Bookman Old Style Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="235.0" prefWidth="209.0">
+               <children>
+                  <StackPane alignment="CENTER_LEFT" prefHeight="135.0" prefWidth="200.0" style="-fx-background-radius: 15 15 15 15;">
+                     <children>
+                        <JFXButton fx:id="myPlayerButton" alignment="CENTER_RIGHT" buttonType="RAISED" contentDisplay="CENTER" onAction="#ShowMyPlayers" prefHeight="50.0" prefWidth="215.0" style="-fx-background-color: #FED45F; -fx-background-radius: 15 15 15 15;" styleClass="shadow" stylesheets="@../CSS/Main.css" text="My Players">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="18.0" />
+                           </font>
+                           <ripplerFill>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.8157894611358643" green="0.1586257368326187" blue="0.1586257368326187" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </RadialGradient>
+                           </ripplerFill>
+                           <StackPane.margin>
+                              <Insets top="5.0" />
+                           </StackPane.margin>
+                           <padding>
+                              <Insets right="35.0" />
+                           </padding>
+                        </JFXButton>
+                        <ImageView fitHeight="36.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Assets/Image/Icons/home_64px.png" />
+                           </image>
+                           <StackPane.margin>
+                              <Insets left="20.0" />
+                           </StackPane.margin>
+                        </ImageView>
+                     </children>
+                  </StackPane>
+                  <StackPane alignment="CENTER_LEFT" prefHeight="135.0" prefWidth="200.0" style="-fx-background-radius: 15 15 15 15;">
+                     <children>
+                        <JFXButton fx:id="searchPlayerButton" alignment="CENTER_RIGHT" buttonType="RAISED" contentDisplay="CENTER" onAction="#ShowSearchOptions" prefHeight="50.0" prefWidth="237.0" style="-fx-background-color: #FED45F; -fx-background-radius: 15 15 15 15;" styleClass="shadow" stylesheets="@../CSS/Main.css" text="Search Players">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="18.0" />
+                           </font>
+                           <ripplerFill>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.8157894611358643" green="0.1586257368326187" blue="0.1586257368326187" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </RadialGradient>
+                           </ripplerFill>
+                           <padding>
+                              <Insets right="15.0" />
+                           </padding>
+                        </JFXButton>
+                        <ImageView fitHeight="28.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Assets/Image/Icons/Search_26px.png" />
+                           </image>
+                           <StackPane.margin>
+                              <Insets left="20.0" />
+                           </StackPane.margin>
+                        </ImageView>
+                     </children>
+                  </StackPane>
+                  <StackPane alignment="CENTER_LEFT" prefHeight="135.0" prefWidth="200.0" style="-fx-background-radius: 15 15 15 15;">
+                     <children>
+                        <JFXButton fx:id="marketplaceButton" alignment="CENTER_RIGHT" buttonType="RAISED" contentDisplay="CENTER" onAction="#ShowBuyablePlayers" prefHeight="50.0" prefWidth="221.0" style="-fx-background-color: #FED45F; -fx-background-radius: 15 15 15 15;" styleClass="shadow" stylesheets="@../CSS/Main.css" text="Marketplace">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="18.0" />
+                           </font>
+                           <ripplerFill>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.8157894611358643" green="0.1586257368326187" blue="0.1586257368326187" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </RadialGradient>
+                           </ripplerFill>
+                           <padding>
+                              <Insets right="27.5" />
+                           </padding>
+                        </JFXButton>
+                        <ImageView fitHeight="36.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Assets/Image/Icons/shopping_cart_64px.png" />
+                           </image>
+                           <StackPane.margin>
+                              <Insets left="20.0" />
+                           </StackPane.margin>
+                        </ImageView>
+                     </children>
+                  </StackPane>
+                  <StackPane alignment="CENTER_LEFT" prefHeight="135.0" prefWidth="200.0" style="-fx-background-radius: 15 15 15 15;">
+                     <children>
+                        <JFXButton fx:id="logoutButton" alignment="CENTER_RIGHT" buttonType="RAISED" contentDisplay="CENTER" onAction="#LogOut" prefHeight="50.0" prefWidth="217.0" style="-fx-background-color: #FED45F; -fx-background-radius: 15 15 15 15;" styleClass="shadow" stylesheets="@../CSS/Main.css" text="Logout">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="18.0" />
+                           </font>
+                           <ripplerFill>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.8157894611358643" green="0.1586257368326187" blue="0.1586257368326187" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </RadialGradient>
+                           </ripplerFill>
+                           <padding>
+                              <Insets right="55.0" />
+                           </padding>
+                           <StackPane.margin>
+                              <Insets bottom="5.0" />
+                           </StackPane.margin>
+                        </JFXButton>
+                        <ImageView fitHeight="19.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Assets/Image/Icons/logout_rounded_up_24px.png" />
+                           </image>
+                           <StackPane.margin>
+                              <Insets left="60.0" />
+                           </StackPane.margin>
+                        </ImageView>
+                     </children>
+                  </StackPane>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <AnchorPane fx:id="anchorPane" layoutX="209.0" prefHeight="550.0" prefWidth="919.0" />
+   </children>
+</AnchorPane>

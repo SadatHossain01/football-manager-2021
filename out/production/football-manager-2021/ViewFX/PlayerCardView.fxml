@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="562.0" prefWidth="1030.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.PlayerCardController">
+   <children>
+      <StackPane alignment="TOP_CENTER" layoutX="14.0" layoutY="36.0" style="-fx-background-color: linear-gradient(to bottom left, #00C5DF, #1F2223);;">
+         <children>
+            <ImageView fitHeight="490.0" fitWidth="362.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/Image/Player%20Card.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="playerImage" fitHeight="190.0" fitWidth="190.0" pickOnBounds="true" preserveRatio="true">
+               <StackPane.margin>
+                  <Insets left="80.0" right="82.0" top="50.0" />
+               </StackPane.margin>
+            </ImageView>
+            <ImageView fx:id="logo" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+               <StackPane.margin>
+                  <Insets left="135.0" top="260.0" />
+               </StackPane.margin>
+            </ImageView>
+            <Separator maxHeight="175.0" orientation="VERTICAL" prefHeight="175.0" prefWidth="0.0">
+               <StackPane.margin>
+                  <Insets top="260.0" />
+               </StackPane.margin>
+            </Separator>
+            <Label fx:id="countryName" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="48.0" prefWidth="121.0" text="Label" textAlignment="CENTER" wrapText="true">
+               <StackPane.margin>
+                  <Insets right="135.0" top="365.0" />
+               </StackPane.margin>
+               <font>
+                  <Font name="Bell MT Bold" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="flag" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+               <StackPane.margin>
+                  <Insets right="135.0" top="275.0" />
+               </StackPane.margin>
+            </ImageView>
+            <Label fx:id="clubName" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="56.0" prefWidth="121.0" text="Label" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Bell MT Bold" size="18.0" />
+               </font>
+               <StackPane.margin>
+                  <Insets left="135.0" top="365.0" />
+               </StackPane.margin>
+            </Label>
+         </children>
+      </StackPane>
+      <Label layoutX="366.0" layoutY="36.0" prefHeight="20.0" prefWidth="635.0" style="-fx-background-color: #202334;" text="PLAYER DATA" textFill="#f2ecec">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </Label>
+      <VBox layoutX="366.0" layoutY="56.0">
+         <children>
+            <VBox prefHeight="78.0" prefWidth="635.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="39.0" prefWidth="318.0" text="Name">
+                           <font>
+                              <Font name="Rockwell" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </Label>
+                        <Label prefHeight="41.0" prefWidth="318.0" text="Market Value">
+                           <font>
+                              <Font name="Rockwell" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="pName" prefHeight="39.0" prefWidth="318.0" text="pName" wrapText="true">
+                           <font>
+                              <Font name="Rockwell Bold" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="pValue" prefHeight="41.0" prefWidth="318.0" text="pValue" textOverrun="CENTER_WORD_ELLIPSIS" wrapText="true">
+                           <font>
+                              <Font name="Rockwell Bold" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" prefHeight="78.0" prefWidth="635.0" style="-fx-background-color: #414141;">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="39.0" prefWidth="318.0" text="Club" textFill="WHITE">
+                           <font>
+                              <Font name="Rockwell" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </Label>
+                        <Label prefHeight="41.0" prefWidth="318.0" text="Country" textFill="WHITE">
+                           <font>
+                              <Font name="Rockwell" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="pClub" prefHeight="39.0" prefWidth="318.0" text="pClub" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS" wrapText="true">
+                           <font>
+                              <Font name="Rockwell Bold" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="pCountry" prefHeight="41.0" prefWidth="318.0" text="pCountry" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS" wrapText="true">
+                           <font>
+                              <Font name="Rockwell Bold" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="78.0" prefWidth="635.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="39.0" prefWidth="318.0" text="Height">
+                           <font>
+                              <Font name="Rockwell" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </Label>
+                        <Label prefHeight="41.0" prefWidth="318.0" text="Weight">
+                           <font>
+                              <Font name="Rockwell" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="pHeight" prefHeight="39.0" prefWidth="318.0" text="pHeight" textOverrun="CENTER_WORD_ELLIPSIS" wrapText="true">
+                           <font>
+                              <Font name="Rockwell Bold" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="pWeight" prefHeight="41.0" prefWidth="318.0" text="pWeight" textOverrun="CENTER_WORD_ELLIPSIS" wrapText="true">
+                           <font>
+                              <Font name="Rockwell Bold" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="78.0" prefWidth="635.0" style="-fx-background-color: #414141;">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="39.0" prefWidth="318.0" text="Playing Position" textFill="WHITE">
+                           <font>
+                              <Font name="Rockwell" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </Label>
+                        <Label prefHeight="41.0" prefWidth="318.0" text="Jersey Number" textFill="WHITE">
+                           <font>
+                              <Font name="Rockwell" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="pPosition" prefHeight="39.0" prefWidth="318.0" text="pPosition" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS" wrapText="true">
+                           <font>
+                              <Font name="Rockwell Bold" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="pNumber" prefHeight="41.0" prefWidth="318.0" text="pNumber" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS" wrapText="true">
+                           <font>
+                              <Font name="Rockwell Bold" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="78.0" prefWidth="635.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="39.0" prefWidth="318.0" text="Preferred Foot">
+                           <font>
+                              <Font name="Rockwell" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </Label>
+                        <Label prefHeight="41.0" prefWidth="318.0" text="Weekly Salary">
+                           <font>
+                              <Font name="Rockwell" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="pFoot" prefHeight="39.0" prefWidth="318.0" text="pFoot" textOverrun="CENTER_WORD_ELLIPSIS" wrapText="true">
+                           <font>
+                              <Font name="Rockwell Bold" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="pSalary" prefHeight="41.0" prefWidth="318.0" text="pSalary" textOverrun="CENTER_WORD_ELLIPSIS" wrapText="true">
+                           <font>
+                              <Font name="Rockwell Bold" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="78.0" prefWidth="635.0" style="-fx-background-color: #414141;">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="39.0" prefWidth="318.0" text="Transfer Status" textFill="WHITE">
+                           <font>
+                              <Font name="Rockwell" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </Label>
+                        <Label prefHeight="41.0" prefWidth="318.0" text="Transfer Fee Asked For" textFill="WHITE">
+                           <font>
+                              <Font name="Rockwell" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="pStatus" prefHeight="39.0" prefWidth="318.0" text="pStatus" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS" wrapText="true">
+                           <font>
+                              <Font name="Rockwell Bold" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="pFee" prefHeight="41.0" prefWidth="318.0" text="pFee" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS" wrapText="true">
+                           <font>
+                              <Font name="Rockwell Bold" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
