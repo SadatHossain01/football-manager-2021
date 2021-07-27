@@ -5,10 +5,7 @@ import DTO.ClubLoginAuthentication;
 import DTO.Request;
 import DataModel.Club;
 import DataModel.Player;
-import javafx.animation.Animation;
-import javafx.animation.FadeTransition;
-import javafx.animation.Interpolator;
-import javafx.animation.Transition;
+import javafx.animation.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -141,7 +138,7 @@ public class Main extends Application {
         });
         scene.setFill(Color.TRANSPARENT);
         primaryStage.setScene(scene);
-        primaryStage.setOpacity(0.925);
+        primaryStage.setOpacity(0.94);
         primaryStage.setOnCloseRequest(event -> {
             try {
                 myNetworkUtil.write(new Request((myClub == null ? "" : myClub.getName()), Request.Type.IAmOut));
@@ -192,6 +189,12 @@ public class Main extends Application {
         var loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("/ViewFX/PlayerSearchView.fxml"));
         Parent root = loader.load();
+        FadeTransition fadeTransition = new FadeTransition(Duration.millis(750), root);
+        fadeTransition.setFromValue(0);
+        fadeTransition.setToValue(1);
+        fadeTransition.setCycleCount(1);
+        fadeTransition.setInterpolator(Interpolator.EASE_OUT);
+        fadeTransition.play();
         mainPane.getChildren().add(root);
         PlayerSearchController searchController = loader.getController();
         searchController.setMain(this);
@@ -272,6 +275,12 @@ public class Main extends Application {
         var loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("/ViewFX/PlayerListView.fxml"));
         Parent root = loader.load();
+        FadeTransition fadeTransition = new FadeTransition(Duration.millis(750), root);
+        fadeTransition.setFromValue(0);
+        fadeTransition.setToValue(1);
+        fadeTransition.setCycleCount(1);
+        fadeTransition.setInterpolator(Interpolator.EASE_BOTH);
+        fadeTransition.play();
         mainPane.getChildren().add(root);
         PlayerListViewController playerListViewController = loader.getController();
         playerListViewController.setMain(this);

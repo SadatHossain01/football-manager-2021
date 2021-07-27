@@ -51,7 +51,7 @@
                         </RadialGradient>
                      </textFill>
                   </Label>
-                  <VBox layoutX="176.0" layoutY="310.0" prefHeight="129.0" prefWidth="273.0">
+                  <VBox layoutX="176.0" layoutY="369.0" prefHeight="129.0" prefWidth="273.0">
                      <children>
                         <HBox>
                            <children>
