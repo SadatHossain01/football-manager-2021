@@ -113,15 +113,15 @@ public class Main extends Application {
             var anim2 = numberGeneratingAnimation(661, controller.clubCount);
             var anim3 = numberGeneratingAnimation(163, controller.countryCount);
             titleAnimation.setOnFinished(event -> {
-                controller.l1.setText("players");
+                controller.l1.setText("Players");
                 anim1.play();
             });
             anim1.setOnFinished(event -> {
-                controller.l2.setText("clubs");
+                controller.l2.setText("Clubs");
                 anim2.play();
             });
             anim2.setOnFinished(event -> {
-                controller.l3.setText("countries");
+                controller.l3.setText("Countries");
                 anim3.play();
             });
             anim3.setOnFinished(event -> isFirstTimeTransition = false);
@@ -252,7 +252,7 @@ public class Main extends Application {
                 e.printStackTrace();
             }
         });
-        FadeTransition fadeTransition = new FadeTransition(Duration.millis(600), root);
+        FadeTransition fadeTransition = new FadeTransition(Duration.millis(750), root);
         fadeTransition.setFromValue(0);
         fadeTransition.setToValue(1);
         fadeTransition.setCycleCount(1);

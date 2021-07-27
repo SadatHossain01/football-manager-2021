@@ -46,11 +46,11 @@ public class ClubLoginController {
         if (!main.isFirstTimeTransition){
             appName.setText("Football Manager 2021");
             playerCount.setText("16707");
-            l1.setText("players");
+            l1.setText("Players");
             clubCount.setText("661");
-            l2.setText("clubs");
+            l2.setText("Clubs");
             countryCount.setText("163");
-            l3.setText("countries");
+            l3.setText("Countries");
         }
         this.main = main;
         List<String> all = new ArrayList<>();
