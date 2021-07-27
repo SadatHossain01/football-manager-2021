@@ -103,7 +103,6 @@ public class ReadThreadServer implements Runnable{
                     }
                 }
                 else{
-                    for (var c : clubPasswordList.entrySet()) System.out.println(c.getKey() + ";" + c.getValue());
                     try {
                         networkUtil.write(new RequestResponse(RequestResponse.Type.UsernameNotRegistered));
                     } catch (IOException e) {
@@ -137,7 +136,7 @@ public class ReadThreadServer implements Runnable{
                         var newInfo = new NewPlayerPurchased(p, buyer.getName(), seller.getName());
                         networkUtil.write(newInfo);
                         var sellerNetworkUtil = clubNetworkUtilMap.get(seller.getName());
-                        sellerNetworkUtil.write(newInfo);
+                        if (sellerNetworkUtil != null) sellerNetworkUtil.write(newInfo);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
