@@ -2,10 +2,7 @@ package Controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.MenuButton;
-import javafx.scene.control.MenuItem;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
 import sample.Main;
 
@@ -19,12 +16,42 @@ public class ClubLoginController {
     private Main main;
 
     @FXML
+    public Label appName;
+
+    @FXML
+    public Label playerCount;
+
+    @FXML
+    public Label clubCount;
+
+    @FXML
+    public Label countryCount;
+
+    @FXML
+    public Label l1;
+
+    @FXML
+    public Label l2;
+
+    @FXML
+    public Label l3;
+
+    @FXML
     private PasswordField password;
 
     @FXML
     private MenuButton clubName;
 
     public void initiate(Main main){
+        if (!main.isFirstTimeTransition){
+            appName.setText("Football Manager 2021");
+            playerCount.setText("16707");
+            l1.setText("players");
+            clubCount.setText("661");
+            l2.setText("clubs");
+            countryCount.setText("163");
+            l3.setText("countries");
+        }
         this.main = main;
         List<String> all = new ArrayList<>();
         for (var c : main.clubLogoMap.entrySet()){

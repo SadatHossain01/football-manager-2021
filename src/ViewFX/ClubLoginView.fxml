@@ -22,7 +22,7 @@
          <left>
             <Pane focusTraversable="true" prefHeight="540.0" prefWidth="463.0" styleClass="linear-grid" stylesheets="@../CSS/Main.css" BorderPane.alignment="CENTER">
                <children>
-                  <Label alignment="CENTER" layoutY="165.0" prefHeight="163.0" prefWidth="462.0" text="Football Manager 2021" textAlignment="CENTER">
+                  <Label fx:id="appName" alignment="CENTER" layoutY="165.0" prefHeight="163.0" prefWidth="462.0" text="Football Manager 2021" textAlignment="CENTER">
                      <font>
                         <Font name="Showcard Gothic" size="30.0" />
                      </font>
@@ -47,6 +47,132 @@
                            </stops>
                         </RadialGradient>
                      </textFill>
+                  </Label>
+                  <Label fx:id="playerCount" alignment="CENTER" layoutX="159.0" layoutY="334.0" prefHeight="43.0" prefWidth="100.0" textAlignment="CENTER">
+                     <textFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.6447368264198303" green="0.09551656991243362" blue="0.09551656991243362" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.7105262875556946" green="0.10526315867900848" blue="0.10526315867900848" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                     <font>
+                        <Font name="Bell MT Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="clubCount" alignment="CENTER" layoutX="159.0" layoutY="377.0" prefHeight="43.0" prefWidth="100.0" textAlignment="CENTER">
+                     <textFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.6447368264198303" green="0.09551656991243362" blue="0.09551656991243362" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.7105262875556946" green="0.10526315867900848" blue="0.10526315867900848" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                     <font>
+                        <Font name="Bell MT Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="countryCount" alignment="CENTER" layoutX="159.0" layoutY="420.0" prefHeight="43.0" prefWidth="100.0" textAlignment="CENTER">
+                     <textFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.6447368264198303" green="0.09551656991243362" blue="0.09551656991243362" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.7105262875556946" green="0.10526315867900848" blue="0.10526315867900848" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                     <font>
+                        <Font name="Bell MT Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="l1" alignment="CENTER" layoutX="259.0" layoutY="334.0" prefHeight="43.0" prefWidth="100.0" textAlignment="CENTER">
+                     <textFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.6447368264198303" green="0.09551656991243362" blue="0.09551656991243362" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.7105262875556946" green="0.10526315867900848" blue="0.10526315867900848" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                     <font>
+                        <Font name="Bell MT Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="l2" alignment="CENTER" layoutX="252.0" layoutY="377.0" prefHeight="43.0" prefWidth="100.0" textAlignment="CENTER">
+                     <textFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.6447368264198303" green="0.09551656991243362" blue="0.09551656991243362" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.7105262875556946" green="0.10526315867900848" blue="0.10526315867900848" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                     <font>
+                        <Font name="Bell MT Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="l3" alignment="CENTER" layoutX="259.0" layoutY="420.0" prefHeight="43.0" prefWidth="100.0" textAlignment="CENTER">
+                     <textFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.6447368264198303" green="0.09551656991243362" blue="0.09551656991243362" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.7105262875556946" green="0.10526315867900848" blue="0.10526315867900848" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                     <font>
+                        <Font name="Bell MT Bold" size="24.0" />
+                     </font>
                   </Label>
                </children></Pane>
          </left>

@@ -5,11 +5,14 @@ import DTO.ClubLoginAuthentication;
 import DTO.Request;
 import DataModel.Club;
 import DataModel.Player;
+import javafx.animation.Animation;
 import javafx.animation.FadeTransition;
 import javafx.animation.Interpolator;
+import javafx.animation.Transition;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.AnchorPane;
@@ -35,7 +38,7 @@ public class Main extends Application {
     public Parent RootOfAll;
     public AnchorPane mainPane;
     public ClubDashboardController dashboardController;
-    public boolean isFirstTime = true;
+    public boolean isFirstTimeCentering = true, isFirstTimeTransition = true;
     public static double screenHeight, screenWidth;
     public InetAddress LocalAddress;
     public Socket socket;
@@ -67,6 +70,20 @@ public class Main extends Application {
         myAlert.show();
     }
 
+    public Animation numberGeneratingAnimation(int n, Label label){
+        return new Transition() {
+            {
+                setCycleDuration(Duration.millis(2000));
+            }
+
+            @Override
+            protected void interpolate(double frac) {
+                final int n1 = Math.round(n * (float) frac);
+                label.setText(String.valueOf(n1));
+            }
+        };
+    }
+
     public void showLoginPage() throws IOException {
         socket = new Socket(LocalAddress, port);
         myNetworkUtil = new NetworkUtil(socket);
@@ -76,6 +93,40 @@ public class Main extends Application {
         loader.setLocation(getClass().getResource("/ViewFX/ClubLoginView.fxml"));
         Parent root = loader.load();
         ClubLoginController controller = loader.getController();
+        //name transition starts
+        if (isFirstTimeTransition) {
+            final String content = "Football Manager 2021";
+            final Animation titleAnimation = new Transition() {
+                {
+                    setCycleDuration(Duration.millis(2000));
+                }
+
+                @Override
+                protected void interpolate(double frac) {
+                    final int length = content.length();
+                    final int n = Math.round(length * (float) frac);
+                    controller.appName.setText(content.substring(0, n));
+                }
+            };
+            titleAnimation.play();
+            var anim1 = numberGeneratingAnimation(16707, controller.playerCount);
+            var anim2 = numberGeneratingAnimation(661, controller.clubCount);
+            var anim3 = numberGeneratingAnimation(163, controller.countryCount);
+            titleAnimation.setOnFinished(event -> {
+                controller.l1.setText("players");
+                anim1.play();
+            });
+            anim1.setOnFinished(event -> {
+                controller.l2.setText("clubs");
+                anim2.play();
+            });
+            anim2.setOnFinished(event -> {
+                controller.l3.setText("countries");
+                anim3.play();
+            });
+            anim3.setOnFinished(event -> isFirstTimeTransition = false);
+        }
+        //ends
         controller.initiate(this);
         controller.setClubClient(this);
         var scene = new javafx.scene.Scene(root);
@@ -101,9 +152,9 @@ public class Main extends Application {
         });
         primaryStage.setTitle("Login Page");
         primaryStage.setResizable(false);
-        if (isFirstTime) {
+        if (isFirstTimeCentering) {
             primaryStage.centerOnScreen();
-            isFirstTime = false;
+            isFirstTimeCentering = false;
         }
         primaryStage.show();
     }
