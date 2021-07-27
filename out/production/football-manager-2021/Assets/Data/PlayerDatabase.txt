@@ -28,7 +28,7 @@ Gabriel Jesus;Gabriel Jesus;Manchester City;Brazil;23;€52.5M;9;ST;175.0;73.0;Rig
 Mats Hummels;Mats Hummels;Borussia Dortmund;Germany;31;€54.5M;15;CB;191.0;96.0;Right;€100.0K;https://cdn.fifacm.com/content/media/imgs/fifa21/players/p178603.png?v=22;0;€0.0
 Ousmane Dembélé;Ousmane Dembele;FC Barcelona;France;23;€57.5M;11;RW RM;178.0;67.0;Left;€175.0K;https://cdn.fifacm.com/content/media/imgs/fifa21/players/p231443.png?v=22;0;€0.0
 Yann Sommer;Yann Sommer;Borussia M'gladbach;Switzerland;31;€22.5M;1;GK;183.0;79.0;Right;€46.5K;https://cdn.fifacm.com/content/media/imgs/fifa21/players/p177683.png?v=22;0;€0.0
-Zlatan Ibrahimovic;Zlatan Ibrahimovic;Milan;Sweden;38;€14.5M;11;ST;195.0;95.0;Right;€53.0K;https://cdn.fifacm.com/content/media/imgs/fifa21/players/p41236.png?v=22;0;€0.0
+Zlatan Ibrahimovic;Zlatan Ibrahimovic;Milan;Sweden;38;€14.5M;11;ST;195.0;95.0;Right;€134.0K;https://cdn.fifacm.com/content/media/imgs/fifa21/players/p41236.png?v=22;0;€0.0
 Sergio Asenjo Andrés;Sergio Asenjo Andres;Villarreal CF;Spain;31;€16.0M;1;GK;189.0;87.0;Right;€33.5K;https://cdn.fifacm.com/content/media/imgs/fifa21/players/p178750.png?v=22;0;€0.0
 Rogelio Funes Mori;Rogelio Funes Mori;Monterrey;Mexico;29;€10.5M;7;ST;186.0;78.0;Right;€47.0K;https://cdn.fifacm.com/content/media/imgs/fifa21/players/p198140.png?v=22;0;€0.0
 Marcos Acuña;Marcos Acuna;Sevilla FC;Argentina;28;€33.0M;19;LB LM;172.0;69.0;Left;€40.5K;https://cdn.fifacm.com/content/media/imgs/fifa21/players/p224334.png?v=22;0;€0.0
