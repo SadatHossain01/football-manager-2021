@@ -5,6 +5,8 @@ import DTO.ClubLoginAuthentication;
 import DTO.Request;
 import DataModel.Club;
 import DataModel.Player;
+import javafx.animation.FadeTransition;
+import javafx.animation.Interpolator;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -15,6 +17,7 @@ import javafx.scene.paint.Color;
 import javafx.stage.Modality;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 import util.CurrentScene;
 import util.MyAlert;
 import util.NetworkUtil;
@@ -87,7 +90,7 @@ public class Main extends Application {
         });
         scene.setFill(Color.TRANSPARENT);
         primaryStage.setScene(scene);
-        primaryStage.setOpacity(0.9);
+        primaryStage.setOpacity(0.925);
         primaryStage.setOnCloseRequest(event -> {
             try {
                 myNetworkUtil.write(new Request((myClub == null ? "" : myClub.getName()), Request.Type.IAmOut));
@@ -198,6 +201,12 @@ public class Main extends Application {
                 e.printStackTrace();
             }
         });
+        FadeTransition fadeTransition = new FadeTransition(Duration.millis(600), root);
+        fadeTransition.setFromValue(0);
+        fadeTransition.setToValue(1);
+        fadeTransition.setCycleCount(1);
+        fadeTransition.setInterpolator(Interpolator.EASE_IN);
+        fadeTransition.play();
         stage.setScene(scene);
         stage.setTitle("Player Detail");
         stage.setResizable(false);
