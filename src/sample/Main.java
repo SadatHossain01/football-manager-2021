@@ -199,7 +199,7 @@ public class Main extends Application {
         PlayerSearchController searchController = loader.getController();
         searchController.setMain(this);
         searchController.initiate(myClub);
-        primaryStage.setTitle("Player Search Options");
+        primaryStage.setTitle(myClub.getName() + " Player Search Options");
         primaryStage.setResizable(false);
         primaryStage.show();
     }
@@ -219,7 +219,7 @@ public class Main extends Application {
         var scene = new javafx.scene.Scene(root);
         stage.setScene(scene);
         stage.setOnCloseRequest(event -> currentPageType = previousPageType);
-        stage.setTitle("Country Wise Player Count");
+        stage.setTitle(myClub.getName() + " Country Wise Player Count");
         stage.setResizable(false);
         if (!stage.isShowing()) {
             stage.initModality(Modality.APPLICATION_MODAL);
@@ -285,7 +285,7 @@ public class Main extends Application {
         PlayerListViewController playerListViewController = loader.getController();
         playerListViewController.setMain(this);
         playerListViewController.initiate(playerList, pageType);
-        primaryStage.setTitle("Player List Display");
+        primaryStage.setTitle(myClub.getName() + " Player List Display");
         primaryStage.setResizable(false);
         primaryStage.show();
     }

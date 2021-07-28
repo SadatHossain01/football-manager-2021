@@ -202,9 +202,14 @@ public class ReadThreadServer implements Runnable{
                     isThreadOn = false;
                 }
             }
-            System.out.print("Quitting from this read thread server: ");
-            if (!isThreadOn && club != null) System.out.print(" " + club.getName());
-            System.out.println();
         }
+        try {
+            networkUtil.closeConnection();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.print("Quitting from this read thread server: ");
+        if (club != null) System.out.print(" " + club.getName());
+        System.out.println();
     }
 }

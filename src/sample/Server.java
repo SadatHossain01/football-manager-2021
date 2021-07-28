@@ -80,6 +80,11 @@ public class Server {
                         e.printStackTrace();
                     }
                     System.out.println("Good Bye");
+                    try {
+                        server.serverSocket.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                     System.exit(0);
                 }
             }
