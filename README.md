@@ -6,7 +6,7 @@ A Football Manager Application built on Javafx, containing authentic information
 ![Lionel Messi](https://github.com/Sadat-Hossain-01/football-manager-2021/blob/main/screenshots/Messi.png "Lionel Messi") 
 ![Cristiano Ronaldo](https://github.com/Sadat-Hossain-01/football-manager-2021/blob/main/screenshots/Ronaldo.png "Cristiano Ronaldo")
 ![Neymar](https://github.com/Sadat-Hossain-01/football-manager-2021/blob/main/screenshots/Neymar.png "Neymar Jr.")
-![Search Options](https://github.com/Sadat-Hossain-01/football-manager-2021/blob/main/screenshots/Search%20Options.png)
+![Search Options](https://github.com/Sadat-Hossain-01/football-manager-2021/blob/main/screenshots/Search%20Options.png "Player Search Options")
 
 ## **Transfer Process Demonstration**
 
