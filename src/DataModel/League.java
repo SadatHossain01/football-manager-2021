@@ -21,17 +21,18 @@ public class League {
     }
 
     public static String FormatName(String name) {
-        StringBuilder str = new StringBuilder(name.trim());
-        str.setCharAt(0, Character.toUpperCase(str.charAt(0)));
-        for (int i = 1; i < str.length(); i++) {
-            if (str.charAt(i - 1) == ' ') {
-                if (str.charAt(i) == ' ') {
-                    str.deleteCharAt(i);
-                    i--;
-                } else str.setCharAt(i, Character.toUpperCase(str.charAt(i)));
-            }
-        }
-        return str.toString();
+        return name;
+//        StringBuilder str = new StringBuilder(name.trim());
+//        str.setCharAt(0, Character.toUpperCase(str.charAt(0)));
+//        for (int i = 1; i < str.length(); i++) {
+//            if (str.charAt(i - 1) == ' ') {
+//                if (str.charAt(i) == ' ') {
+//                    str.deleteCharAt(i);
+//                    i--;
+//                } else str.setCharAt(i, Character.toUpperCase(str.charAt(i)));
+//            }
+//        }
+//        return str.toString();
     }
 
     public Player FindPlayer(String PlayerName) { //will return null if club is not registered yet

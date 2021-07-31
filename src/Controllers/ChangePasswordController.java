@@ -46,6 +46,7 @@ public class ChangePasswordController {
             new MyAlert(Alert.AlertType.ERROR, "Same Password", "You should input a new password").show();
         }
         else{
+            main.myClub.setPassword(newPassword.getText());
             main.myNetworkUtil.write(new PasswordChange(newPassword.getText(), main.myClub.getName()));
         }
     }
