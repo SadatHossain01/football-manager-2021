@@ -10,6 +10,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
@@ -32,12 +33,13 @@ import java.util.List;
 import java.util.Objects;
 
 public class Main extends Application {
-    public Stage primaryStage, tempStage;
+    public Stage primaryStage, tempStage, previousTempStage;
     public Parent RootOfAll;
     public AnchorPane mainPane;
     public ClubDashboardController dashboardController;
     public boolean isFirstTimeCentering = true, isFirstTimeTransition = true;
     public PlayerSearchController.Type latestSearchType;
+    public Alert latestAlert;
     public static double screenHeight, screenWidth;
     public InetAddress LocalAddress;
     public Socket socket;
@@ -292,7 +294,9 @@ public class Main extends Application {
         primaryStage.show();
     }
 
-    public void showSearchedPlayers(List<Player> playerList) throws IOException {
+    public void showSearchedPlayers(List<Player> playerList, Stage stage) throws IOException {
+        System.out.println("Got a new order");
+        for (var p : playerList) System.out.println(p.getName());
         currentPageType = CurrentScene.Type.ShowSearchedPlayers;
         var loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("/ViewFX/PlayerListView.fxml"));
@@ -303,22 +307,23 @@ public class Main extends Application {
         fadeTransition.setCycleCount(1);
         fadeTransition.setInterpolator(Interpolator.EASE_BOTH);
         fadeTransition.play();
-        var scene = new Scene(root);
-        tempStage = new Stage();
-        tempStage.setScene(scene);
         PlayerListViewController playerListViewController = loader.getController();
         playerListViewController.setMain(this);
         playerListViewController.initiate(playerList, PlayerListViewController.PageType.SimpleList);
-        tempStage.setTitle(myClub.getName() + " Searched Players");
-        tempStage.setResizable(false);
-        if (!tempStage.isShowing()) {
-            tempStage.initModality(Modality.APPLICATION_MODAL);
-            tempStage.showAndWait();
+        var scene = new Scene(root);
+        tempStage = stage;
+        stage.setScene(scene);
+        stage.setTitle(myClub.getName() + " Searched Players");
+        stage.setResizable(false);
+        if (!stage.isShowing()) {
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.showAndWait();
         }
     }
 
     public void AskForTransferFee(MinimalPlayerDetailController singlePlayerDetailController) throws IOException {
         Stage stage = new Stage();
+        if (currentPageType == CurrentScene.Type.ShowSearchedPlayers) previousTempStage = tempStage;
         tempStage = stage;
         previousPageType = currentPageType;
         currentPageType = CurrentScene.Type.AskForTransferFee;
@@ -335,7 +340,7 @@ public class Main extends Application {
             if (event.getCode() == KeyCode.ENTER) {
                 try {
                     askForTransferFeeController.confirmListing();
-                    if (isMainListUpdatePending) {
+                    if (isMainListUpdatePending && previousPageType == CurrentScene.Type.ShowMyPlayers) {
                         refreshPage(CurrentScene.Type.ShowMyPlayers);
                         isMainListUpdatePending = false;
                     }
@@ -380,13 +385,35 @@ public class Main extends Application {
         else if (pageType == CurrentScene.Type.ShowMarketPlayers) showBuyablePlayers();
         else if (pageType == CurrentScene.Type.ShowSearchedPlayers){
             //refining the list
-            List<Player> newList = new ArrayList<>();
-            List<Player> clubPlayerList = myClub.getPlayerList();
-            for (var p : latestSearchedPlayers){
-                if (clubPlayerList.contains(p)) newList.add(p);
+            if (latestSearchType == PlayerSearchController.Type.NormalStuff) {
+                List<Player> newList = new ArrayList<>();
+                List<Player> clubPlayerList = myClub.getPlayerList();
+                for (var p : latestSearchedPlayers) {
+                    System.out.println(p.getName());
+                    if (clubPlayerList.contains(p)) {
+                        newList.add(p);
+                    }
+                }
+                latestSearchedPlayers = newList;
+                showSearchedPlayers(newList, tempStage);
             }
-            latestSearchedPlayers = newList;
-            displayList(newList, PlayerListViewController.PageType.SimpleList);
+            else if (latestSearchType == PlayerSearchController.Type.MaxAge){
+                var wantedList = myClub.SearchMaximumAge();
+                showSearchedPlayers(wantedList, tempStage);
+            }
+            else if (latestSearchType == PlayerSearchController.Type.MaxHeight){
+                var wantedList = myClub.SearchMaximumHeight();
+                showSearchedPlayers(wantedList, tempStage);
+            }
+            else if (latestSearchType == PlayerSearchController.Type.MaxSal){
+                var wantedList = myClub.SearchMaximumSalary();
+                showSearchedPlayers(wantedList, tempStage);
+            }
+            else if (latestSearchType == PlayerSearchController.Type.TotalSalary){
+                if (latestAlert.isShowing()){
+                    latestAlert.setContentText("Total Annual Salary is " + Club.showCurrency(myClub.TotalYearlySalary()));
+                }
+            }
         }
         else if (pageType == CurrentScene.Type.ShowCountryWiseCount){
             showCountryWiseCount(tempStage, latestCountryWiseCountClub);

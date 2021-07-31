@@ -84,7 +84,8 @@ public class AskForTransferFeeController {
     @FXML
     void confirmTransferListing(ActionEvent event) throws IOException {
         confirmListing();
-        if (main.isMainListUpdatePending){
+        if (main.previousPageType == CurrentScene.Type.ShowSearchedPlayers) main.tempStage = main.previousTempStage;
+        if (main.isMainListUpdatePending && main.previousPageType == CurrentScene.Type.ShowMyPlayers){
             main.refreshPage(CurrentScene.Type.ShowMyPlayers);
             main.isMainListUpdatePending = false;
         }

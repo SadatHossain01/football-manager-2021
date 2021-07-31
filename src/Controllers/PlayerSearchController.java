@@ -109,7 +109,7 @@ public class PlayerSearchController {
             main.currentPageType = CurrentScene.Type.ShowSearchedPlayers;
             main.latestSearchedPlayers = wantedList;
 //            main.displayList(wantedList, PlayerListViewController.PageType.SimpleList);
-            main.showSearchedPlayers(wantedList);
+            main.showSearchedPlayers(wantedList, new Stage());
         }
         else{
             new MyAlert(Alert.AlertType.INFORMATION, MyAlert.MessageType.NoPlayerFound).show();
@@ -117,41 +117,42 @@ public class PlayerSearchController {
     }
 
     @FXML
-    void showCountByCountry(ActionEvent event) throws IOException {
+    void showCountByCountry() throws IOException {
         main.showCountryWiseCount(new Stage(), club);
     }
 
     @FXML
-    void showMaximumAgePlayers(ActionEvent event) throws IOException {
+    public void showMaximumAgePlayers() throws IOException {
         main.latestSearchType = Type.MaxAge;
         var wantedList = club.SearchMaximumAge();
 //        main.displayList(wantedList, PlayerListViewController.PageType.SimpleList);
-        main.showSearchedPlayers(wantedList);
+        main.showSearchedPlayers(wantedList, new Stage());
     }
 
     @FXML
-    void showMaximumHeightPlayers(ActionEvent event) throws IOException {
+    public void showMaximumHeightPlayers() throws IOException {
         main.latestSearchType = Type.MaxHeight;
         var wantedList = club.SearchMaximumHeight();
 //        main.displayList(wantedList, PlayerListViewController.PageType.SimpleList);
-        main.showSearchedPlayers(wantedList);
+        main.showSearchedPlayers(wantedList, new Stage());
     }
 
     @FXML
-    void showMaximumSalaryPlayers(ActionEvent event) throws IOException {
+    public void showMaximumSalaryPlayers() throws IOException {
         main.latestSearchType = Type.MaxSal;
         var wantedList = club.SearchMaximumSalary();
 //        main.displayList(wantedList, PlayerListViewController.PageType.SimpleList);
-        main.showSearchedPlayers(wantedList);
+        main.showSearchedPlayers(wantedList, new Stage());
     }
 
     @FXML
-    void showTotalAnnualSalary() {
+    public void showTotalAnnualSalary() {
         main.latestSearchType = Type.TotalSalary;
         var alert = new MyAlert(Alert.AlertType.INFORMATION, MyAlert.MessageType.TotalAnnualSalary);
         alert.setHeaderText("Total Annual Salary of " + club.getName());
         alert.setContentText("Total Annual Salary is " + Club.showCurrency(club.TotalYearlySalary()));
         alert.show();
+        main.latestAlert = alert;
     }
 
     @FXML
