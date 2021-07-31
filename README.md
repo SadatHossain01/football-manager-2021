@@ -19,8 +19,6 @@ https://user-images.githubusercontent.com/57341381/127739940-6f917127-bf69-4c52-
 
 ![Search Options](https://github.com/Sadat-Hossain-01/football-manager-2021/blob/main/screenshots/Search%20Options.png "Player Search Options")
 
-https://user-images.githubusercontent.com/57341381/127519337-dad42fdb-e77e-4d92-bcc0-a22358dbac50.mp4
-
 ## Player Transfer Demonstration
 
 https://user-images.githubusercontent.com/57341381/127739589-5655d9cf-6106-4a89-8caf-4f182b113635.mp4
