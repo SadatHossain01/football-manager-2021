@@ -295,8 +295,6 @@ public class Main extends Application {
     }
 
     public void showSearchedPlayers(List<Player> playerList, Stage stage) throws IOException {
-        System.out.println("Got a new order");
-        for (var p : playerList) System.out.println(p.getName());
         currentPageType = CurrentScene.Type.ShowSearchedPlayers;
         var loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("/ViewFX/PlayerListView.fxml"));
