@@ -227,7 +227,7 @@ public class Main extends Application {
         stage.setResizable(false);
         if (!stage.isShowing()) {
             stage.initModality(Modality.APPLICATION_MODAL);
-            stage.showAndWait();
+            stage.show();
         }
     }
 
@@ -270,7 +270,7 @@ public class Main extends Application {
         stage.setResizable(false);
         if (!stage.isShowing()) {
             stage.initModality(Modality.APPLICATION_MODAL);
-            stage.showAndWait();
+            stage.show();
         }
     }
 
@@ -315,11 +315,11 @@ public class Main extends Application {
         stage.setResizable(false);
         if (!stage.isShowing()) {
             stage.initModality(Modality.APPLICATION_MODAL);
-            stage.showAndWait();
+            stage.show();
         }
     }
 
-    public void AskForTransferFee(MinimalPlayerDetailController singlePlayerDetailController) throws IOException {
+    public void AskForTransferFee(MinimalPlayerDetailController minimalPlayerDetailController) throws IOException {
         Stage stage = new Stage();
         if (currentPageType == CurrentScene.Type.ShowSearchedPlayers) previousTempStage = tempStage;
         tempStage = stage;
@@ -331,7 +331,7 @@ public class Main extends Application {
         AskForTransferFeeController askForTransferFeeController = loader.getController();
         askForTransferFeeController.setMain(this);
         askForTransferFeeController.setStage(stage);
-        askForTransferFeeController.initiate(singlePlayerDetailController);
+        askForTransferFeeController.initiate(minimalPlayerDetailController);
         var scene = new javafx.scene.Scene(root);
         scene.setFill(Color.TRANSPARENT);
         scene.setOnKeyPressed(event -> {
@@ -366,7 +366,7 @@ public class Main extends Application {
         stage.centerOnScreen();
         if (!stage.isShowing()) {
             stage.initModality(Modality.APPLICATION_MODAL);
-            stage.showAndWait();
+            stage.show();
         }
     }
 
@@ -463,7 +463,7 @@ public class Main extends Application {
         stage.centerOnScreen();
         if (!stage.isShowing()) {
             stage.initModality(Modality.APPLICATION_MODAL);
-            stage.showAndWait();
+            stage.show();
         }
     }
 
