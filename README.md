@@ -5,6 +5,10 @@ A Football Manager Application built on Javafx, containing authentic information
 
 https://user-images.githubusercontent.com/57341381/127739539-b69188e7-9aa4-4313-b46d-99e154ba5d8c.mp4
 
+## Change Password
+
+https://user-images.githubusercontent.com/57341381/127739940-6f917127-bf69-4c52-8c4f-953b655bbb8f.mp4
+
 ## Detailed Display of Player's Information
 
 ![Lionel Messi](https://github.com/Sadat-Hossain-01/football-manager-2021/blob/main/screenshots/Messi.png "Lionel Messi") 
@@ -14,8 +18,6 @@ https://user-images.githubusercontent.com/57341381/127739539-b69188e7-9aa4-4313-
 ## Player Search Options
 
 ![Search Options](https://github.com/Sadat-Hossain-01/football-manager-2021/blob/main/screenshots/Search%20Options.png "Player Search Options")
-
-https://user-images.githubusercontent.com/57341381/127519337-dad42fdb-e77e-4d92-bcc0-a22358dbac50.mp4
 
 ## Player Transfer Demonstration
 
