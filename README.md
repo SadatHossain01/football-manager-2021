@@ -3,7 +3,7 @@ A Football Manager Application built on Javafx, containing authentic information
 
 ## Login 
 
-https://user-images.githubusercontent.com/57341381/127515572-87ea7f3d-894a-431a-ab23-82be9ceb4f70.mp4
+https://user-images.githubusercontent.com/57341381/127739539-b69188e7-9aa4-4313-b46d-99e154ba5d8c.mp4
 
 ## Detailed Display of Player's Information
 
@@ -19,7 +19,11 @@ https://user-images.githubusercontent.com/57341381/127519337-dad42fdb-e77e-4d92-
 
 ## Player Transfer Demonstration
 
-https://user-images.githubusercontent.com/57341381/127509599-1099af2c-07e5-4fa2-8d29-bd88b92de5a4.mp4
+https://user-images.githubusercontent.com/57341381/127739589-5655d9cf-6106-4a89-8caf-4f182b113635.mp4
+
+
+
+
 
 
 
