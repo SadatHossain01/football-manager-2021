@@ -79,4 +79,9 @@ public class ClubDashboardController {
         main.showSearchPage();
     }
 
+    @FXML
+    void changePassword() throws IOException{
+        main.showPasswordChangingWindow();
+    }
+
 }

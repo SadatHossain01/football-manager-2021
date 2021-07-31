@@ -49,6 +49,11 @@ public class ReadThreadClient implements Runnable {
                     Platform.runLater(() -> main.showAlertMessage(new MyAlert(Alert.AlertType.ERROR, "Insufficient budget", "Sorry, you do not have sufficient budget to buy this player")));
                 } else if (type == RequestResponse.Type.AlreadyBought) {
                     Platform.runLater(() -> main.showAlertMessage(new MyAlert(Alert.AlertType.ERROR, "Player not for sale anymore", "Sorry, this player has been already bought")));
+                } else if (type == RequestResponse.Type.PasswordChangeSuccessful){
+                    Platform.runLater(() -> {
+                        main.showAlertMessage(new MyAlert(Alert.AlertType.INFORMATION, "Password Change Successful", "Your password has been successfully updated"));
+                        main.tempStage.close();
+                    });
                 }
             } else if (next instanceof Club) {
                 c = (Club) next;

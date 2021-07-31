@@ -29,9 +29,6 @@ public class Server {
         transferListedPlayers = new ArrayList<>();
         serverSocket = new ServerSocket(port);
         unaccented_accented = new HashMap<>();
-        //Reading all the club passwords
-        clubPasswordList = FileOperations.readCredentialsOfClubs("src/Assets/Data/LoginCredentials.txt");
-        System.out.println("Loaded login credentials of " + clubPasswordList.size() + " clubs");
         //Reading player data
         var loaded = FileOperations.readPlayerDataFromFile("src/Assets/Data/PlayerDatabase.txt"); //file name path starts from one step back of src, but others all start from src
         for (var p : loaded) {
@@ -44,13 +41,15 @@ public class Server {
 //            }
         }
         System.out.println("Loaded data of " + FiveASideLeague.CentralPlayerDatabase.size() + " players and " + FiveASideLeague.getClubList().size() + " clubs");
+        //Reading all the club passwords
+        clubPasswordList = FileOperations.readCredentialsOfClubs("src/Assets/Data/LoginCredentials.txt", FiveASideLeague);
+        System.out.println("Loaded login credentials of " + clubPasswordList.size() + " clubs");
         //Reading Country Data
         countryFlagList = FileOperations.readFlagLinkOfCountries("src/Assets/Data/CountryFlags.txt");
         System.out.println("Loaded flags of " + countryFlagList.size() + " countries");
         //Reading Club Data
         clubLogoList = FileOperations.readInformationOfClubs("src/Assets/Data/ClubDatabase.txt", FiveASideLeague, unaccented_accented);
 //        for (var e : unaccented_accented.entrySet()) System.out.println(e.getKey() + " " + e.getValue());
-//        FileOperations.generateClubPasswords("src/Assets/Text/LoginCredentials.txt", FiveASideLeague.getClubList());
         System.out.println("Server up and running");
     }
 

@@ -35,7 +35,7 @@ public class FileOperations {
         return playerList;
     }
 
-    public static HashMap<String, String> readCredentialsOfClubs(String FILE_NAME) throws IOException {
+    public static HashMap<String, String> readCredentialsOfClubs(String FILE_NAME, League league) throws IOException {
         HashMap<String, String> clubPasswords = new HashMap<>();
         BufferedReader input = new BufferedReader(new InputStreamReader(new FileInputStream(FILE_NAME)));
         while (true) {
@@ -46,6 +46,10 @@ public class FileOperations {
                 String username = tokens[0];
                 String password = tokens[2];
                 clubPasswords.put(username, password);
+                var c = league.FindClub(username);
+                if (c != null){
+                    c.setPassword(password);
+                }
             } catch (Exception ignored) {
             }
         }
@@ -115,10 +119,10 @@ public class FileOperations {
         output.close();
     }
 
-    public static void generateClubPasswords(String FILE_NAME, List<Club> clubList) throws Exception {
-        BufferedWriter output = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(FILE_NAME)));
+    public static void writeClubPasswords(String FILE_NAME, List<Club> clubList) throws Exception {
+        BufferedWriter output = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(FILE_NAME), "windows-1252"));
         for (Club c : clubList) {
-            output.write(c.getName() + ";" + c.getUnAccentedName().toLowerCase());
+            output.write(c.getName() + ";" + c.getUnAccentedName() + ";" + c.getPassword());
             output.write("\n");
         }
         output.close();

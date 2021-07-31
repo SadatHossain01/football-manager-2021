@@ -1,7 +1,6 @@
 package util;
 
 import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
 
 public class MyAlert extends Alert {
     public enum MessageType {
@@ -42,8 +41,4 @@ public class MyAlert extends Alert {
         }
     }
 
-    public MyAlert(AlertType alertType, String contentText, MessageType mType, ButtonType... buttons) {
-        super(alertType, contentText, buttons);
-        this.mType = mType;
-    }
 }

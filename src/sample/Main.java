@@ -9,6 +9,7 @@ import javafx.animation.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
@@ -363,6 +364,55 @@ public class Main extends Application {
         }
         else if (pageType == CurrentScene.Type.ShowCountryWiseCount){
             showCountryWiseCount(tempStage, latestCountryWiseCountClub);
+        }
+    }
+
+    public void showPasswordChangingWindow() throws IOException {
+        Stage stage = new Stage();
+        tempStage = stage;
+        previousPageType = currentPageType;
+        currentPageType = CurrentScene.Type.ChangePassword;
+        var loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/ViewFX/ChangePasswordView.fxml"));
+        Parent root = loader.load();
+        ChangePasswordController changePasswordController = loader.getController();
+        changePasswordController.setStage(stage);
+        changePasswordController.initiate(myClub.getPassword(), this);
+        var scene = new Scene(root);
+        scene.setFill(Color.TRANSPARENT);
+        scene.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ENTER) {
+                try {
+                    changePasswordController.confirm();
+                    if (isMainListUpdatePending) {
+                        refreshPage(CurrentScene.Type.ShowMyPlayers);
+                        isMainListUpdatePending = false;
+                    }
+                    else currentPageType = CurrentScene.Type.ShowMyPlayers;
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        stage.setOpacity(0.9);
+        stage.setOnCloseRequest(event -> {
+            try {
+                if (isMainListUpdatePending) {
+                    refreshPage(CurrentScene.Type.ShowMyPlayers);
+                    isMainListUpdatePending = false;
+                }
+                else currentPageType = CurrentScene.Type.ShowMyPlayers;
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+        stage.setScene(scene);
+        stage.setTitle("Change Password");
+        stage.setResizable(false);
+        stage.centerOnScreen();
+        if (!stage.isShowing()) {
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.showAndWait();
         }
     }
 

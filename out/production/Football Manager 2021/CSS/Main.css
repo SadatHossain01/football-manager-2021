@@ -1,0 +1,29 @@
+.shadow {
+    -fx-effect: dropShadow(three-pass-box, rgba(0, 0, 0, 0.1), 10.0, 0.0, 0.0, 10.0);
+}
+
+.linear-grid {
+    -fx-background-color: linear-gradient(to bottom left, #28A8EA, #81DB6A);
+}
+
+.transparent {
+    -fx-background-color: rgba(0, 0, 0, 0.0);
+}
+
+.list-view {
+    -fx-padding: 3px ;
+    -fx-background-color: darkred ;
+}
+
+.list-cell {
+    -fx-padding: 2px ;
+    -fx-background-radius: 25 25 25 25;
+    -fx-background-color: transparent, -fx-background ;
+    -fx-background-insets: 0px, 2px ;
+}
+
+.list-cell:empty {
+    -fx-padding: 2px ;
+    -fx-background-color: transparent ;
+    -fx-background-insets: 0 ;
+}

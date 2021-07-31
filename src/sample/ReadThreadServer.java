@@ -5,12 +5,12 @@ import DataModel.Club;
 import DataModel.League;
 import DataModel.Player;
 import javafx.util.Pair;
+import util.FileOperations;
 import util.NetworkUtil;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Locale;
 
 public class ReadThreadServer implements Runnable{
     private Thread t;
@@ -78,6 +78,7 @@ public class ReadThreadServer implements Runnable{
                         clubNetworkUtilMap.put(username, networkUtil);
                         hasAddedToMap = true;
                         club = league.FindClub(username);
+                        club.setPassword(password);
                         try {
                             networkUtil.write(club);
 //                            networkUtil.write(new ClubCountryImageData(countryFlagList, clubLogoList));
@@ -109,6 +110,20 @@ public class ReadThreadServer implements Runnable{
                         e.printStackTrace();
                     }
                     System.out.println("Username not registered on server");
+                }
+            }
+            else if (next instanceof PasswordChange){
+                PasswordChange pc = (PasswordChange) next;
+                var c = league.FindClub(pc.getClubName());
+                System.out.println("Received a request from " + c.getName() + " to change password to " + pc.getNewPassword());
+                c.setPassword(pc.getNewPassword());
+                try {
+                    FileOperations.writeClubPasswords("src/Assets/Data/LoginCredentials.txt", league.getClubList());
+                    clubPasswordList.put(pc.getClubName(), pc.getNewPassword());
+                    networkUtil.write(new RequestResponse(RequestResponse.Type.PasswordChangeSuccessful));
+                    System.out.println("Password change has been successful");
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
             }
             else if (next instanceof BuyRequest){

@@ -11,6 +11,7 @@ public class Club implements Serializable {
     private String name;
     private String unAccentedName;
     private String logoLink;
+    private String password;
     private double TransferBudget, Worth;
     private List<Player> PlayerList;
     public List<Integer> NumberTaken;
@@ -80,6 +81,14 @@ public class Club implements Serializable {
     }
 
     public List<Player> getPlayerList(){return PlayerList;}
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
     public List<Player> SearchMaximumSalary() {
         List<Player> wantedPlayers = new ArrayList<>();
