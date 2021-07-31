@@ -27,6 +27,10 @@ public class PlayerSearchController {
         this.main = main;
     }
 
+    public enum Type{
+        NormalStuff, MaxSal, MaxHeight, MaxAge, TotalSalary;
+    }
+
     @FXML
     private TextField PlayerName;
 
@@ -57,6 +61,7 @@ public class PlayerSearchController {
     }
 
     public List<Player> doTheSearch() {
+        main.latestSearchType = Type.NormalStuff;
         double minSalary = -1, maxSalary = -1;
         List<Player> answer = new ArrayList<>();
         try {
@@ -103,7 +108,8 @@ public class PlayerSearchController {
         if (wantedList != null && !wantedList.isEmpty()) {
             main.currentPageType = CurrentScene.Type.ShowSearchedPlayers;
             main.latestSearchedPlayers = wantedList;
-            main.displayList(wantedList, PlayerListViewController.PageType.SimpleList);
+//            main.displayList(wantedList, PlayerListViewController.PageType.SimpleList);
+            main.showSearchedPlayers(wantedList);
         }
         else{
             new MyAlert(Alert.AlertType.INFORMATION, MyAlert.MessageType.NoPlayerFound).show();
@@ -117,24 +123,31 @@ public class PlayerSearchController {
 
     @FXML
     void showMaximumAgePlayers(ActionEvent event) throws IOException {
+        main.latestSearchType = Type.MaxAge;
         var wantedList = club.SearchMaximumAge();
-        main.displayList(wantedList, PlayerListViewController.PageType.SimpleList);
+//        main.displayList(wantedList, PlayerListViewController.PageType.SimpleList);
+        main.showSearchedPlayers(wantedList);
     }
 
     @FXML
     void showMaximumHeightPlayers(ActionEvent event) throws IOException {
+        main.latestSearchType = Type.MaxHeight;
         var wantedList = club.SearchMaximumHeight();
-        main.displayList(wantedList, PlayerListViewController.PageType.SimpleList);
+//        main.displayList(wantedList, PlayerListViewController.PageType.SimpleList);
+        main.showSearchedPlayers(wantedList);
     }
 
     @FXML
     void showMaximumSalaryPlayers(ActionEvent event) throws IOException {
+        main.latestSearchType = Type.MaxSal;
         var wantedList = club.SearchMaximumSalary();
-        main.displayList(wantedList, PlayerListViewController.PageType.SimpleList);
+//        main.displayList(wantedList, PlayerListViewController.PageType.SimpleList);
+        main.showSearchedPlayers(wantedList);
     }
 
     @FXML
-    void showTotalAnnualSalary(ActionEvent event) {
+    void showTotalAnnualSalary() {
+        main.latestSearchType = Type.TotalSalary;
         var alert = new MyAlert(Alert.AlertType.INFORMATION, MyAlert.MessageType.TotalAnnualSalary);
         alert.setHeaderText("Total Annual Salary of " + club.getName());
         alert.setContentText("Total Annual Salary is " + Club.showCurrency(club.TotalYearlySalary()));

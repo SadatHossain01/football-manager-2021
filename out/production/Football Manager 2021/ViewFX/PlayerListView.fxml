@@ -3,4 +3,4 @@
 <?import javafx.scene.control.ListView?>
 
 
-<ListView fx:id="listView" accessibleRole="SCROLL_PANE" prefHeight="550.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.PlayerListViewController" />
+<ListView fx:id="listView" accessibleRole="SCROLL_PANE" focusTraversable="false" prefHeight="550.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.PlayerListViewController" />

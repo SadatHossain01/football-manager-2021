@@ -37,6 +37,7 @@ public class Main extends Application {
     public AnchorPane mainPane;
     public ClubDashboardController dashboardController;
     public boolean isFirstTimeCentering = true, isFirstTimeTransition = true;
+    public PlayerSearchController.Type latestSearchType;
     public static double screenHeight, screenWidth;
     public InetAddress LocalAddress;
     public Socket socket;
@@ -289,6 +290,31 @@ public class Main extends Application {
         primaryStage.setTitle(myClub.getName() + " Player List Display");
         primaryStage.setResizable(false);
         primaryStage.show();
+    }
+
+    public void showSearchedPlayers(List<Player> playerList) throws IOException {
+        currentPageType = CurrentScene.Type.ShowSearchedPlayers;
+        var loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/ViewFX/PlayerListView.fxml"));
+        Parent root = loader.load();
+        FadeTransition fadeTransition = new FadeTransition(Duration.millis(750), root);
+        fadeTransition.setFromValue(0);
+        fadeTransition.setToValue(1);
+        fadeTransition.setCycleCount(1);
+        fadeTransition.setInterpolator(Interpolator.EASE_BOTH);
+        fadeTransition.play();
+        var scene = new Scene(root);
+        tempStage = new Stage();
+        tempStage.setScene(scene);
+        PlayerListViewController playerListViewController = loader.getController();
+        playerListViewController.setMain(this);
+        playerListViewController.initiate(playerList, PlayerListViewController.PageType.SimpleList);
+        tempStage.setTitle(myClub.getName() + " Searched Players");
+        tempStage.setResizable(false);
+        if (!tempStage.isShowing()) {
+            tempStage.initModality(Modality.APPLICATION_MODAL);
+            tempStage.showAndWait();
+        }
     }
 
     public void AskForTransferFee(MinimalPlayerDetailController singlePlayerDetailController) throws IOException {
