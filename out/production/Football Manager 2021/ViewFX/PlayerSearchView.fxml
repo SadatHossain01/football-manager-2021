@@ -14,29 +14,29 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="920.0" style="-fx-background-color: #464775;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.PlayerSearchController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="920.0" style="-fx-background-color: #57606f;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.PlayerSearchController">
    <VBox layoutX="204.0" layoutY="94.0" prefHeight="579.0" prefWidth="129.0" spacing="50.0">
-      <Label text="Name" textFill="WHITE">
+      <Label text="Name" textFill="#ced6e0">
          <font>
             <Font name="Book Antiqua Bold" size="24.0" />
          </font>
       </Label>
-      <Label text="Country" textFill="WHITE">
+      <Label text="Country" textFill="#ced6e0">
          <font>
             <Font name="Book Antiqua Bold" size="24.0" />
          </font>
       </Label>
-      <Label text="Position" textFill="WHITE">
+      <Label text="Position" textFill="#ced6e0">
          <font>
             <Font name="Book Antiqua Bold" size="24.0" />
          </font>
       </Label>
-      <Label text="Min Salary" textFill="WHITE">
+      <Label text="Min Salary" textFill="#ced6e0">
          <font>
             <Font name="Book Antiqua Bold" size="24.0" />
          </font>
       </Label>
-      <Label text="Max Salary" textFill="WHITE">
+      <Label text="Max Salary" textFill="#ced6e0">
          <font>
             <Font name="Book Antiqua Bold" size="24.0" />
          </font>
@@ -77,19 +77,19 @@
          <Font name="Bookman Old Style Bold" size="18.0" />
       </font>
    </TextField>
-   <JFXButton buttonType="RAISED" layoutX="407.0" layoutY="486.0" onAction="#showSearchResults" prefHeight="34.0" prefWidth="107.0" ripplerFill="#9e1818" style="-fx-background-color: #DDDDDD; -fx-background-radius: 10 10 10 10;" text="Search" textAlignment="CENTER" textFill="#eb2b55">
+   <JFXButton buttonType="RAISED" layoutX="407.0" layoutY="486.0" onAction="#showSearchResults" prefHeight="34.0" prefWidth="107.0" ripplerFill="#9e1818" style="-fx-background-color: #747d8c; -fx-background-radius: 10 10 10 10;" text="Search" textAlignment="CENTER" textFill="WHITE">
       <font>
          <Font name="Elephant" size="18.0" />
       </font>
    </JFXButton>
-   <JFXButton buttonType="RAISED" layoutX="556.0" layoutY="486.0" onAction="#resetInput" prefHeight="34.0" prefWidth="107.0" ripplerFill="#9e1818" style="-fx-background-color: #DDDDDD; -fx-background-radius: 10 10 10 10;" text="Reset" textAlignment="CENTER" textFill="#eb2b55">
+   <JFXButton buttonType="RAISED" layoutX="556.0" layoutY="486.0" onAction="#resetInput" prefHeight="34.0" prefWidth="107.0" ripplerFill="#9e1818" style="-fx-background-color: #747d8c; -fx-background-radius: 10 10 10 10;" text="Reset" textAlignment="CENTER" textFill="WHITE">
       <font>
          <Font name="Elephant" size="18.0" />
       </font>
    </JFXButton>
    <VBox layoutX="20.0" layoutY="160.0" prefHeight="254.0" prefWidth="146.0">
       <children>
-         <JFXButton buttonType="RAISED" onAction="#showCountByCountry" prefHeight="75.0" prefWidth="175.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15 15 15 15;" text="Player Count by Country" textAlignment="CENTER" textFill="#d32626" wrapText="true">
+         <JFXButton buttonType="RAISED" onAction="#showCountByCountry" prefHeight="75.0" prefWidth="175.0" style="-fx-background-color: #747d8c; -fx-background-radius: 15 15 15 15;" text="Player Count by Country" textAlignment="CENTER" textFill="WHITE" wrapText="true">
             <ripplerFill>
                <LinearGradient endX="1.0" endY="1.0">
                   <stops>
@@ -113,7 +113,7 @@
                <Insets bottom="5.0" />
             </VBox.margin>
          </JFXButton>
-         <JFXButton buttonType="RAISED" onAction="#showMaximumSalaryPlayers" prefHeight="75.0" prefWidth="175.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15 15 15 15;" text="Maximum Salary" textAlignment="CENTER" textFill="#d32626" wrapText="true">
+         <JFXButton buttonType="RAISED" onAction="#showMaximumSalaryPlayers" prefHeight="75.0" prefWidth="175.0" style="-fx-background-color: #747d8c; -fx-background-radius: 15 15 15 15;" text="Maximum Salary" textAlignment="CENTER" textFill="WHITE" wrapText="true">
             <ripplerFill>
                <LinearGradient endX="1.0" endY="1.0">
                   <stops>
@@ -137,7 +137,7 @@
                <Insets bottom="5.0" />
             </VBox.margin>
          </JFXButton>
-         <JFXButton buttonType="RAISED" onAction="#showMaximumHeightPlayers" prefHeight="75.0" prefWidth="175.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15 15 15 15;" text="Maximum Height" textAlignment="CENTER" textFill="#d32626" wrapText="true">
+         <JFXButton buttonType="RAISED" onAction="#showMaximumHeightPlayers" prefHeight="75.0" prefWidth="175.0" style="-fx-background-color: #747d8c; -fx-background-radius: 15 15 15 15;" text="Maximum Height" textAlignment="CENTER" textFill="WHITE" wrapText="true">
             <ripplerFill>
                <LinearGradient endX="1.0" endY="1.0">
                   <stops>
@@ -161,7 +161,7 @@
                <Insets bottom="5.0" />
             </VBox.margin>
          </JFXButton>
-         <JFXButton buttonType="RAISED" onAction="#showMaximumAgePlayers" prefHeight="75.0" prefWidth="175.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15 15 15 15;" text="Maximum Age" textAlignment="CENTER" textFill="#d32626" wrapText="true">
+         <JFXButton buttonType="RAISED" onAction="#showMaximumAgePlayers" prefHeight="75.0" prefWidth="175.0" style="-fx-background-color: #747d8c; -fx-background-radius: 15 15 15 15;" text="Maximum Age" textAlignment="CENTER" textFill="WHITE" wrapText="true">
             <ripplerFill>
                <LinearGradient endX="1.0" endY="1.0">
                   <stops>
@@ -185,7 +185,7 @@
                <Insets bottom="5.0" />
             </VBox.margin>
          </JFXButton>
-         <JFXButton buttonType="RAISED" onAction="#showTotalAnnualSalary" prefHeight="75.0" prefWidth="175.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15 15 15 15;" text="Total Annual Salary" textAlignment="CENTER" textFill="#d32626" wrapText="true">
+         <JFXButton buttonType="RAISED" onAction="#showTotalAnnualSalary" prefHeight="75.0" prefWidth="175.0" style="-fx-background-color: #747d8c; -fx-background-radius: 15 15 15 15;" text="Total Annual Salary" textAlignment="CENTER" textFill="WHITE" wrapText="true">
             <ripplerFill>
                <LinearGradient endX="1.0" endY="1.0">
                   <stops>
@@ -211,7 +211,7 @@
          </JFXButton>
       </children>
    </VBox>
-   <Label fx:id="clubName" alignment="CENTER" layoutX="138.0" layoutY="7.0" prefHeight="78.0" prefWidth="734.0" stylesheets="@../CSS/Main.css" text="ClubName" textAlignment="CENTER" textFill="WHITE">
+   <Label fx:id="clubName" alignment="CENTER" layoutX="138.0" layoutY="7.0" prefHeight="78.0" prefWidth="734.0" stylesheets="@../CSS/Main.css" text="ClubName" textAlignment="CENTER" textFill="#ced6e0">
       <font>
          <Font name="Imprint MT Shadow" size="64.0" />
       </font>

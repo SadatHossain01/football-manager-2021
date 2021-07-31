@@ -3,4 +3,4 @@
 <?import javafx.scene.control.ListView?>
 
 
-<ListView fx:id="countryListView" prefHeight="372.0" prefWidth="600.0" style="-fx-background-color: #363226;" stylesheets="@../CSS/Main.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.CountryListViewController" />
+<ListView fx:id="countryListView" prefHeight="372.0" prefWidth="600.0" style="-fx-background-color: #57606f;" stylesheets="@../CSS/Main.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.CountryListViewController" />

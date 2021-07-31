@@ -14,7 +14,6 @@ import java.io.IOException;
 
 public class ClubDashboardController {
     private Main main;
-    private Club club;
 
     public void setMain(Main main) {
         this.main = main;
@@ -50,7 +49,6 @@ public class ClubDashboardController {
     public void initiate(Club club){
         main.mainPane = anchorPane;
         main.dashboardController = this;
-        this.club = club;
         clubName.setText(club.getName());
         budget.setText("Budget: " + Club.showCurrency(club.getTransferBudget()));
         clubWorth.setText("Worth: " + Club.showCurrency(club.getWorth()));

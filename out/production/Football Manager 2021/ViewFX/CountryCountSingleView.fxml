@@ -10,7 +10,7 @@
 
 <AnchorPane prefHeight="434.0" prefWidth="762.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.CountryCountSingleViewController">
    <children>
-      <HBox fx:id="countryCard" alignment="CENTER" layoutX="126.0" layoutY="54.0" prefHeight="310.0" prefWidth="540.0" style="-fx-background-radius: 25 25 25 25; -fx-background-color: #535945;">
+      <HBox fx:id="countryCard" alignment="CENTER" layoutX="126.0" layoutY="54.0" prefHeight="310.0" prefWidth="540.0" style="-fx-background-radius: 25 25 25 25; -fx-background-color: #57606f;">
          <children>
             <VBox alignment="CENTER">
                <children>

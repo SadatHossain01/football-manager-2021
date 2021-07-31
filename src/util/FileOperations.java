@@ -37,7 +37,7 @@ public class FileOperations {
 
     public static HashMap<String, String> readCredentialsOfClubs(String FILE_NAME, League league) throws IOException {
         HashMap<String, String> clubPasswords = new HashMap<>();
-        BufferedReader input = new BufferedReader(new InputStreamReader(new FileInputStream(FILE_NAME)));
+        BufferedReader input = new BufferedReader(new InputStreamReader(new FileInputStream(FILE_NAME), "windows-1252"));
         while (true) {
             String line = input.readLine();
             if (line == null) break;

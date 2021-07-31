@@ -169,15 +169,15 @@ public class Main extends Application {
     }
 
     public void resetAllButtons() {
-        dashboardController.myPlayerButton.setStyle("-fx-background-color: #FED45F; -fx-background-radius: 15 15 15 15");
-        dashboardController.marketplaceButton.setStyle("-fx-background-color: #FED45F; -fx-background-radius: 15 15 15 15");
-        dashboardController.searchPlayerButton.setStyle("-fx-background-color: #FED45F; -fx-background-radius: 15 15 15 15");
+        dashboardController.myPlayerButton.setStyle("-fx-background-color:  #f1f2f6; -fx-background-radius: 15 15 15 15");
+        dashboardController.marketplaceButton.setStyle("-fx-background-color:  #f1f2f6; -fx-background-radius: 15 15 15 15");
+        dashboardController.searchPlayerButton.setStyle("-fx-background-color:  #f1f2f6; -fx-background-radius: 15 15 15 15");
     }
 
     public void showMyPlayers() throws IOException {
         resetAllButtons();
         mainPane.getChildren().clear();
-        dashboardController.myPlayerButton.setStyle("-fx-background-color: #DA3A34; -fx-background-radius: 15 15 15 15");
+        dashboardController.myPlayerButton.setStyle("-fx-background-color: #ff4757; -fx-background-radius: 15 15 15 15");
         currentPageType = CurrentScene.Type.ShowMyPlayers;
         displayList(myClub.getPlayerList(), PlayerListViewController.PageType.SimpleList);
     }
@@ -186,7 +186,7 @@ public class Main extends Application {
         currentPageType = CurrentScene.Type.ShowSearchOptions;
         resetAllButtons();
         mainPane.getChildren().clear();
-        dashboardController.searchPlayerButton.setStyle("-fx-background-color: #DA3A34; -fx-background-radius: 15 15 15 15");
+        dashboardController.searchPlayerButton.setStyle("-fx-background-color: #ff4757; -fx-background-radius: 15 15 15 15");
         var loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("/ViewFX/PlayerSearchView.fxml"));
         Parent root = loader.load();
@@ -345,7 +345,7 @@ public class Main extends Application {
         currentPageType = CurrentScene.Type.ShowMarketPlayers;
         resetAllButtons();
         mainPane.getChildren().clear();
-        dashboardController.marketplaceButton.setStyle("-fx-background-color: #DA3A34; -fx-background-radius: 15 15 15 15");
+        dashboardController.marketplaceButton.setStyle("-fx-background-color: #ff4757; -fx-background-radius: 15 15 15 15");
         displayList(transferListedPlayers, PlayerListViewController.PageType.TransferList);
     }
 

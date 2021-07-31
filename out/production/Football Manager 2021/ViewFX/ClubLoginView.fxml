@@ -14,85 +14,29 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.RadialGradient?>
-<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="540.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ClubLoginController">
    <children>
       <BorderPane prefHeight="540.0" prefWidth="960.0" style="-fx-background-color: #FFFFFF;">
          <left>
-            <Pane focusTraversable="true" prefHeight="540.0" prefWidth="463.0" styleClass="linear-grid" stylesheets="@../CSS/Main.css" BorderPane.alignment="CENTER">
+            <Pane focusTraversable="true" prefHeight="540.0" prefWidth="463.0" style="-fx-background-color: #2f3542;" BorderPane.alignment="CENTER">
                <children>
-                  <Label fx:id="appName" alignment="CENTER" layoutX="1.0" layoutY="48.0" prefHeight="163.0" prefWidth="462.0" text="Football Manager 2021" textAlignment="CENTER">
+                  <Label fx:id="appName" alignment="CENTER" layoutX="1.0" layoutY="48.0" prefHeight="163.0" prefWidth="462.0" text="Football Manager 2021" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="Showcard Gothic" size="30.0" />
                      </font>
-                     <textFill>
-                        <RadialGradient centerX="0.8" centerY="0.3" cycleMethod="REFLECT" focusAngle="-56.31" radius="0.5">
-                           <stops>
-                              <Stop>
-                                 <color>
-                                    <Color red="0.6184210777282715" green="0.08302875608205795" blue="0.2168768346309662" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="0.7441640004739898">
-                                 <color>
-                                    <Color red="0.8600000143051147" green="0.09459999948740005" blue="0.2859500050544739" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="1.0">
-                                 <color>
-                                    <Color red="0.8684210777282715" green="0.08845029026269913" blue="0.28344297409057617" />
-                                 </color>
-                              </Stop>
-                           </stops>
-                        </RadialGradient>
-                     </textFill>
                   </Label>
                   <VBox layoutX="176.0" layoutY="369.0" prefHeight="129.0" prefWidth="273.0">
                      <children>
                         <HBox>
                            <children>
-                              <Label fx:id="playerCount" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="43.0" prefWidth="110.0" textAlignment="CENTER">
-                                 <textFill>
-                                    <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
-                                       <stops>
-                                          <Stop>
-                                             <color>
-                                                <Color red="0.6447368264198303" green="0.09551656991243362" blue="0.09551656991243362" />
-                                             </color>
-                                          </Stop>
-                                          <Stop offset="1.0">
-                                             <color>
-                                                <Color red="0.7105262875556946" green="0.10526315867900848" blue="0.10526315867900848" />
-                                             </color>
-                                          </Stop>
-                                       </stops>
-                                    </RadialGradient>
-                                 </textFill>
+                              <Label fx:id="playerCount" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="43.0" prefWidth="110.0" textAlignment="CENTER" textFill="WHITE">
                                  <font>
                                     <Font name="Bell MT Bold" size="24.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="l1" prefHeight="43.0" prefWidth="160.0" textAlignment="CENTER">
-                                 <textFill>
-                                    <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
-                                       <stops>
-                                          <Stop>
-                                             <color>
-                                                <Color red="0.6447368264198303" green="0.09551656991243362" blue="0.09551656991243362" />
-                                             </color>
-                                          </Stop>
-                                          <Stop offset="1.0">
-                                             <color>
-                                                <Color red="0.7105262875556946" green="0.10526315867900848" blue="0.10526315867900848" />
-                                             </color>
-                                          </Stop>
-                                       </stops>
-                                    </RadialGradient>
-                                 </textFill>
+                              <Label fx:id="l1" prefHeight="43.0" prefWidth="160.0" textAlignment="CENTER" textFill="WHITE">
                                  <font>
                                     <Font name="Bell MT Bold" size="24.0" />
                                  </font>
@@ -104,44 +48,12 @@
                         </HBox>
                         <HBox>
                            <children>
-                              <Label fx:id="clubCount" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="43.0" prefWidth="110.0" textAlignment="CENTER">
-                                 <textFill>
-                                    <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
-                                       <stops>
-                                          <Stop>
-                                             <color>
-                                                <Color red="0.6447368264198303" green="0.09551656991243362" blue="0.09551656991243362" />
-                                             </color>
-                                          </Stop>
-                                          <Stop offset="1.0">
-                                             <color>
-                                                <Color red="0.7105262875556946" green="0.10526315867900848" blue="0.10526315867900848" />
-                                             </color>
-                                          </Stop>
-                                       </stops>
-                                    </RadialGradient>
-                                 </textFill>
+                              <Label fx:id="clubCount" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="43.0" prefWidth="110.0" textAlignment="CENTER" textFill="WHITE">
                                  <font>
                                     <Font name="Bell MT Bold" size="24.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="l2" prefHeight="43.0" prefWidth="155.0" textAlignment="CENTER">
-                                 <textFill>
-                                    <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
-                                       <stops>
-                                          <Stop>
-                                             <color>
-                                                <Color red="0.6447368264198303" green="0.09551656991243362" blue="0.09551656991243362" />
-                                             </color>
-                                          </Stop>
-                                          <Stop offset="1.0">
-                                             <color>
-                                                <Color red="0.7105262875556946" green="0.10526315867900848" blue="0.10526315867900848" />
-                                             </color>
-                                          </Stop>
-                                       </stops>
-                                    </RadialGradient>
-                                 </textFill>
+                              <Label fx:id="l2" prefHeight="43.0" prefWidth="155.0" textAlignment="CENTER" textFill="WHITE">
                                  <font>
                                     <Font name="Bell MT Bold" size="24.0" />
                                  </font>
@@ -153,44 +65,12 @@
                         </HBox>
                         <HBox>
                            <children>
-                              <Label fx:id="countryCount" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="43.0" prefWidth="110.0" textAlignment="CENTER">
-                                 <textFill>
-                                    <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
-                                       <stops>
-                                          <Stop>
-                                             <color>
-                                                <Color red="0.6447368264198303" green="0.09551656991243362" blue="0.09551656991243362" />
-                                             </color>
-                                          </Stop>
-                                          <Stop offset="1.0">
-                                             <color>
-                                                <Color red="0.7105262875556946" green="0.10526315867900848" blue="0.10526315867900848" />
-                                             </color>
-                                          </Stop>
-                                       </stops>
-                                    </RadialGradient>
-                                 </textFill>
+                              <Label fx:id="countryCount" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="43.0" prefWidth="110.0" textAlignment="CENTER" textFill="WHITE">
                                  <font>
                                     <Font name="Bell MT Bold" size="24.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="l3" prefHeight="43.0" prefWidth="157.0" textAlignment="CENTER">
-                                 <textFill>
-                                    <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
-                                       <stops>
-                                          <Stop>
-                                             <color>
-                                                <Color red="0.6447368264198303" green="0.09551656991243362" blue="0.09551656991243362" />
-                                             </color>
-                                          </Stop>
-                                          <Stop offset="1.0">
-                                             <color>
-                                                <Color red="0.7105262875556946" green="0.10526315867900848" blue="0.10526315867900848" />
-                                             </color>
-                                          </Stop>
-                                       </stops>
-                                    </RadialGradient>
-                                 </textFill>
+                              <Label fx:id="l3" prefHeight="43.0" prefWidth="157.0" textAlignment="CENTER" textFill="WHITE">
                                  <font>
                                     <Font name="Bell MT Bold" size="24.0" />
                                  </font>
@@ -222,7 +102,7 @@
                                  </font>
                               </PasswordField>
                               <Separator layoutX="96.0" layoutY="296.0" minWidth="300.0" prefHeight="0.0" prefWidth="330.0" style="-fx-background-color: #3F3F3F;" />
-                              <JFXButton buttonType="RAISED" layoutX="309.0" layoutY="336.0" onAction="#DoSignIn" prefHeight="35.0" prefWidth="115.0" style="-fx-background-color: #81DB6A; -fx-background-radius: 20 20 20 20;" text="Sign In">
+                              <JFXButton buttonType="RAISED" layoutX="309.0" layoutY="336.0" onAction="#DoSignIn" prefHeight="35.0" prefWidth="115.0" style="-fx-background-color: #747d8c; -fx-background-radius: 20 20 20 20;" text="Sign In">
                                  <font>
                                     <Font name="Calisto MT Bold" size="18.0" />
                                  </font>

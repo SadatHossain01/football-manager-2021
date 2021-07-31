@@ -15,7 +15,7 @@
 
 <AnchorPane prefHeight="550.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ClubDashboardController">
    <children>
-      <VBox alignment="CENTER" prefHeight="550.0" prefWidth="209.0" style="-fx-background-color: #333333;">
+      <VBox alignment="CENTER" prefHeight="550.0" prefWidth="209.0" style="-fx-background-color: #2f3542;">
          <children>
             <VBox alignment="CENTER" prefHeight="357.0" prefWidth="209.0">
                <children>
@@ -49,7 +49,7 @@
                <children>
                   <StackPane alignment="CENTER_LEFT" prefHeight="135.0" prefWidth="200.0" style="-fx-background-radius: 15 15 15 15;">
                      <children>
-                        <JFXButton fx:id="myPlayerButton" alignment="CENTER_RIGHT" buttonType="RAISED" contentDisplay="CENTER" onAction="#ShowMyPlayers" prefHeight="50.0" prefWidth="215.0" style="-fx-background-color: #FED45F; -fx-background-radius: 15 15 15 15;" styleClass="shadow" stylesheets="@../CSS/Main.css" text="My Players">
+                        <JFXButton fx:id="myPlayerButton" alignment="CENTER_RIGHT" buttonType="RAISED" contentDisplay="CENTER" onAction="#ShowMyPlayers" prefHeight="50.0" prefWidth="215.0" style="-fx-background-color: #f1f2f6; -fx-background-radius: 15 15 15 15;" styleClass="shadow" stylesheets="@../CSS/Main.css" text="My Players">
                            <font>
                               <Font name="Bookman Old Style Bold" size="18.0" />
                            </font>
@@ -88,7 +88,7 @@
                   </StackPane>
                   <StackPane alignment="CENTER_LEFT" prefHeight="135.0" prefWidth="200.0" style="-fx-background-radius: 15 15 15 15;">
                      <children>
-                        <JFXButton fx:id="searchPlayerButton" alignment="CENTER_RIGHT" buttonType="RAISED" contentDisplay="CENTER" onAction="#ShowSearchOptions" prefHeight="50.0" prefWidth="237.0" style="-fx-background-color: #FED45F; -fx-background-radius: 15 15 15 15;" styleClass="shadow" stylesheets="@../CSS/Main.css" text="Search Players">
+                        <JFXButton fx:id="searchPlayerButton" alignment="CENTER_RIGHT" buttonType="RAISED" contentDisplay="CENTER" onAction="#ShowSearchOptions" prefHeight="50.0" prefWidth="237.0" style="-fx-background-color: #f1f2f6; -fx-background-radius: 15 15 15 15;" styleClass="shadow" stylesheets="@../CSS/Main.css" text="Search Players">
                            <font>
                               <Font name="Bookman Old Style Bold" size="18.0" />
                            </font>
@@ -124,7 +124,7 @@
                   </StackPane>
                   <StackPane alignment="CENTER_LEFT" prefHeight="135.0" prefWidth="200.0" style="-fx-background-radius: 15 15 15 15;">
                      <children>
-                        <JFXButton fx:id="marketplaceButton" alignment="CENTER_RIGHT" buttonType="RAISED" contentDisplay="CENTER" onAction="#ShowBuyablePlayers" prefHeight="50.0" prefWidth="221.0" style="-fx-background-color: #FED45F; -fx-background-radius: 15 15 15 15;" styleClass="shadow" stylesheets="@../CSS/Main.css" text="Marketplace">
+                        <JFXButton fx:id="marketplaceButton" alignment="CENTER_RIGHT" buttonType="RAISED" contentDisplay="CENTER" onAction="#ShowBuyablePlayers" prefHeight="50.0" prefWidth="221.0" style="-fx-background-color: #f1f2f6; -fx-background-radius: 15 15 15 15;" styleClass="shadow" stylesheets="@../CSS/Main.css" text="Marketplace">
                            <font>
                               <Font name="Bookman Old Style Bold" size="18.0" />
                            </font>
@@ -160,7 +160,7 @@
                   </StackPane>
                   <StackPane alignment="CENTER_LEFT" prefHeight="135.0" prefWidth="200.0" style="-fx-background-radius: 15 15 15 15;">
                      <children>
-                        <JFXButton fx:id="logoutButton" alignment="CENTER_RIGHT" buttonType="RAISED" contentDisplay="CENTER" onAction="#LogOut" prefHeight="50.0" prefWidth="217.0" style="-fx-background-color: #FED45F; -fx-background-radius: 15 15 15 15;" styleClass="shadow" stylesheets="@../CSS/Main.css" text="Logout">
+                        <JFXButton fx:id="logoutButton" alignment="CENTER_RIGHT" buttonType="RAISED" contentDisplay="CENTER" onAction="#LogOut" prefHeight="50.0" prefWidth="217.0" style="-fx-background-color: #f1f2f6; -fx-background-radius: 15 15 15 15;" styleClass="shadow" stylesheets="@../CSS/Main.css" text="Logout">
                            <font>
                               <Font name="Bookman Old Style Bold" size="18.0" />
                            </font>
@@ -201,6 +201,6 @@
             </VBox>
          </children>
       </VBox>
-      <AnchorPane fx:id="anchorPane" layoutX="209.0" prefHeight="550.0" prefWidth="919.0" />
+      <AnchorPane fx:id="anchorPane" layoutX="209.0" prefHeight="550.0" prefWidth="919.0" style="-fx-background-color: #ffffff;" />
    </children>
 </AnchorPane>
