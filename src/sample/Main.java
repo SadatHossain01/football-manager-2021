@@ -313,7 +313,7 @@ public class Main extends Application {
                         refreshPage(CurrentScene.Type.ShowMyPlayers);
                         isMainListUpdatePending = false;
                     }
-                    else currentPageType = CurrentScene.Type.ShowMyPlayers;
+                    else currentPageType = previousPageType;
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

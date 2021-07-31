@@ -88,7 +88,7 @@ public class AskForTransferFeeController {
             main.refreshPage(CurrentScene.Type.ShowMyPlayers);
             main.isMainListUpdatePending = false;
         }
-        else main.currentPageType = CurrentScene.Type.ShowMyPlayers;
+        else main.currentPageType = main.previousPageType;
     }
 
     @FXML
