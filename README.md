@@ -1,5 +1,5 @@
 # Football Manager 2021
-A Football Manager Application built on Javafx, containing authentic information and images of more than 16700 players from over 660 clubs and 160 countries, collected from [fifacm](https://www.fifacm.com).
+A Football Manager Application built on Javafx, containing authentic information and images of more than 16700 players from over 660 clubs and 160 countries, collected from [fifacm](https://www.fifacm.com). This was done as our L1T2 Term Project on JavaFX and Java Networking.
 
 ## Login 
 
