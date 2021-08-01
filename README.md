@@ -8,8 +8,10 @@ A Football Manager Application built on Javafx, containing authentic information
 
 ## From Command Line
 Use the following commands.
-`java -jar server.jar`
-`java -jar client,jar`
+```
+java -jar server.jar
+java -jar client,jar
+```
 To save the transfers and progress, close the server by writing `stop` in the terminal where the server is running.
 
 ## Login 
