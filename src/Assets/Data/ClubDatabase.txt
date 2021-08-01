@@ -8,7 +8,7 @@ Napoli;Napoli;€590.0M;€56.0M;https://www.fifacm.com/content/media/imgs/fifa21/te
 Shakhtar Donetsk;Shakhtar Donetsk;€250.0M;€16.8M;https://www.fifacm.com/content/media/imgs/fifa21/teams/256/l101059.png
 Inter;Inter;€983.0M;€99.5M;https://www.fifacm.com/content/media/imgs/fifa21/teams/256/l44.png
 Arsenal;Arsenal;€1.8B;€80.0M;https://www.fifacm.com/content/media/imgs/fifa21/teams/256/l1.png
-Atlético De Madrid;Atletico de Madrid;€1.2B;€68.6M;https://www.fifacm.com/content/media/imgs/fifa21/teams/256/l240.png
+Atlético de Madrid;Atletico de Madrid;€1.2B;€68.6M;https://www.fifacm.com/content/media/imgs/fifa21/teams/256/l240.png
 Borussia Dortmund;Borussia Dortmund;€1.3B;€60.0M;https://www.fifacm.com/content/media/imgs/fifa21/teams/256/l22.png
 Borussia M'gladbach;Borussia M'gladbach;€357.9M;€25.0M;https://www.fifacm.com/content/media/imgs/fifa21/teams/256/l23.png
 Milan;Milan;€526.0M;€37.0M;https://www.fifacm.com/content/media/imgs/fifa21/teams/256/l47.png
